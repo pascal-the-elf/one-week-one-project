@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Type Game</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="https://fonts.googleapis.com/css?family=Baloo" rel="stylesheet">
+    <style>
+        body, h1, h2, h3, h4, h5, h6, p, span, a {
+            font-family: 'Baloo', Arial;
+        }
+        body {
+            width: 90%;
+            margin: 5%;
+        }
+        #ans {
+            width: 100%;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <h1>Type Game</h1>
+    <h3 id="q">Are You Ready? <br>Type "yes" And Submit to Start!</h3>
+    <input id="ans" type="text" onkeyup="KeyUp(event)" />
+    <p id="alert"></p>
+    <p id="timer"></p>
+    <script>
+        var timer = {
+            "used": 0,
+            "timer": 180,
+            "start": function() {
+                timer.used = 1;
+                setInterval(() => {
+                    if(timer.timer) {
+                        timer.timer--;
+                        document.getElementById("timer").innerHTML = "Timer: " + timer.timer;
+                    }
+                    else stop();
+                }, 1000);
+            }
+        };
+        var score = 0;
+        var question = "yes";
+        const ans = document.getElementById("ans");
+        const Q = document.getElementById("q");
+        const Alert = document.getElementById("alert");
+        function KeyUp(event) {
+            var key = event.which || event.keyCode;
+            if(key == 13) {
+                check();
+            }
+        }
+        function check() {
+            if(ans.value === question) {
+                score += 10;
+                Alert.innerHTML = "Score: " + score;
+                nextQ();
+            } else {
+                wrongA();
+            }
+        }
+        function nextQ() {
+            if(!timer.used) timer.start();
+            var length = 10 + Math.floor(Math.random()*20);
+            var q = "";
+            while(length--) {
+                q += genWord();
+            }
+            question = q;
+            Q.innerHTML = q;
+            ans.value = "";
+        }
+        function genWord() {
+            var dic = "abcdefghijklmnopqrstuvxyzABCDEFGHIJKLMNOPQRSTUVXYZ0123456789?!.";
+            var rand = Math.floor(Math.random()*dic.length);
+            return dic.charAt(rand);
+        }
+        function wrongA() {
+            Alert.innerHTML = "Wrong Answer";
+        }
+        function stop() {
+            timer.timer--;
+            ans.disabled = true;
+            alert("Time's Up! Your Score is " + score + "!");
+        }
+    </script>
+</body>
+</html>
