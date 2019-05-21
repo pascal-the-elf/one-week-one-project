@@ -6,5 +6,10 @@ var Game = {
         "start": function() {
             
         }
+    },
+    "data": {
+        "stage": 0,
+        "score": 0,
+        "life": 3
     }
 };
