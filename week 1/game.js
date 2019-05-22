@@ -1,6 +1,6 @@
 var Game = {
     "init": function() {
-        draw.start();
+        this.draw.start();
     },
     "draw": {
         "start": function() {
