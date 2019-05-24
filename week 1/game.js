@@ -1,16 +1,16 @@
 var Game = {
     "init": function() {
-        ctx.font = "20px VT323";
+        ctx.font = "200px VT323";
         this.draw.start();
     },
     "draw": {
         "start": function() {
-            ctx.fillStyle = "#FFFFFF";
-            ctx.fillRect(0, 0, 224, 288);
-            ctx.fillStyle = "#000000";
-            ctx.fillText("High", 10, 10);
-            ctx.fillText("Score", 150, 10);
-            ctx.fillText("Life", 200, 10);
+            ctx.fillStyle = "#000";
+            ctx.fillRect(0, 0, 2240, 2880);
+            ctx.fillStyle = "#fff";
+            ctx.fillText("High", 550, 120);
+            ctx.fillText("Score", 1300, 120);
+            ctx.fillText("Life", 1800, 120);
         }
     },
     "data": {
