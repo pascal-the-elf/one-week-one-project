@@ -1,5 +1,6 @@
 // 17 * 20 (17*120, 20*120)
 // 100 / 17*120 / 100
+// dot-space: 27 * 30
 var Game = {
     "init": function() {
         ctx.font = "160px Arial";
@@ -26,49 +27,64 @@ var Game = {
             ctx.fillText(Game.data.life, 1550, 120*2);
         },
         "map": function() {
+            var ds = 2200 / 27;
+            var pd = 20, hpd = 300;
             // Border
             ctx.beginPath();
-            ctx.moveTo(100, 300);
-            ctx.lineTo(100 + 17 * 120, 300);
-            ctx.lineTo(100 + 17 * 120, 300 + 5 * 120);
-            ctx.lineTo(100 + 14 * 120, 300 + 5 * 120);
-            ctx.lineTo(100 + 14 * 120, 300 + 7 * 120);
-            ctx.lineTo(100 + 18 * 120, 300 + 7 * 120);
-            ctx.lineTo(100 + 18 * 120, 300 + 9 * 120);
-            ctx.lineTo(100 + 14 * 120, 300 + 9 * 120);
-            ctx.lineTo(100 + 14 * 120, 300 + 11 * 120);
-            ctx.lineTo(100 + 17 * 120, 300 + 11 * 120);
-            ctx.lineTo(100 + 17 * 120, 300 + 19 * 120);
-            ctx.lineTo(100, 300 + 19 * 120);
-            ctx.lineTo(100, 300 + 11 * 120);
-            ctx.lineTo(100 + 3 * 120, 300 + 11 * 120);
-            ctx.lineTo(100 + 3 * 120, 300 + 9 * 120);
-            ctx.lineTo(100 - 1 * 120, 300 + 9 * 120);
-            ctx.lineTo(100 - 1 * 120, 300 + 7 * 120);
-            ctx.lineTo(100 + 3 * 120, 300 + 7 * 120);
-            ctx.lineTo(100 + 3 * 120, 300 + 5 * 120);
-            ctx.lineTo(100, 300 + 5 * 120);
-            ctx.lineTo(100, 300);
+            ctx.moveTo(pd, hpd);
+            ctx.lineTo(pd + 13 * ds, hpd);
+            ctx.lineTo(pd + 13 * ds, hpd + 4 * ds);
+            ctx.lineTo(pd + 14 * ds, hpd + 4 * ds);
+            ctx.lineTo(pd + 14 * ds, hpd);
+            ctx.lineTo(pd + 27 * ds, hpd);
+            ctx.lineTo(pd + 27 * ds, hpd + 9 * ds);
+            ctx.lineTo(pd + 22 * ds, hpd + 9 * ds);
+            ctx.lineTo(pd + 22 * ds, hpd + 13 * ds);
+            ctx.lineTo(pd + 28 * ds, hpd + 13 * ds);
+            ctx.lineTo(pd + 28 * ds, hpd + 15 * ds);
+            ctx.lineTo(pd + 22 * ds, hpd + 15 * ds);
+            ctx.lineTo(pd + 22 * ds, hpd + 19 * ds);
+            ctx.lineTo(pd + 27 * ds, hpd + 19 * ds);
+            ctx.lineTo(pd + 27 * ds, hpd + 24 * ds);
+            ctx.lineTo(pd + 25 * ds, hpd + 24 * ds);
+            ctx.lineTo(pd + 25 * ds, hpd + 25 * ds);
+            ctx.lineTo(pd + 27 * ds, hpd + 25 * ds);
+            ctx.lineTo(pd + 27 * ds, hpd + 30 * ds);
+            ctx.lineTo(pd, hpd + 30 * ds);
+            ctx.lineTo(pd, hpd + 25 * ds);
+            ctx.lineTo(pd + 2 * ds, hpd + 25 * ds);
+            ctx.lineTo(pd + 2 * ds, hpd + 24 * ds);
+            ctx.lineTo(pd, hpd + 24 * ds);
+            ctx.lineTo(pd, hpd + 19 * ds);
+            ctx.lineTo(pd + 5 * ds, hpd + 19 * ds);
+            ctx.lineTo(pd + 5 * ds, hpd + 15 * ds);
+            ctx.lineTo(pd - 1 * ds, hpd + 15 * ds);
+            ctx.lineTo(pd - 1 * ds, hpd + 13 * ds);
+            ctx.lineTo(pd + 5 * ds, hpd + 13 * ds);
+            ctx.lineTo(pd + 5 * ds, hpd + 9 * ds);
+            ctx.lineTo(pd, hpd + 9 * ds);
+            ctx.lineTo(pd, hpd);
             ctx.strokeStyle = "blue";
             ctx.lineWidth = 10;
             ctx.stroke();
+            
             // Blocks
             ctx.beginPath();
-            ctx.moveTo(100 + 1 * 120, 300 + 1 * 120);
-            ctx.lineTo(100 + 3 * 120, 300 + 1 * 120);
-            ctx.lineTo(100 + 3 * 120, 300 + 3 * 120);
-            ctx.lineTo(100 + 1 * 120, 300 + 3 * 120);
-            ctx.lineTo(100 + 1 * 120, 300 + 1 * 120);
+            ctx.moveTo(pd + 2 * ds, hpd + 2 * ds);
+            ctx.lineTo(pd + 5 * ds, hpd + 2 * ds);
+            ctx.lineTo(pd + 5 * ds, hpd + 4 * ds);
+            ctx.lineTo(pd + 2 * ds, hpd + 4 * ds);
+            ctx.lineTo(pd + 2 * ds, hpd + 2 * ds);
             ctx.strokeStyle = "blue";
             ctx.lineWidth = 10;
             ctx.stroke();
             
             ctx.beginPath();
-            ctx.moveTo(100 + 4 * 120, 300 + 1 * 120);
-            ctx.lineTo(100 + 7 * 120, 300 + 1 * 120);
-            ctx.lineTo(100 + 7 * 120, 300 + 3 * 120);
-            ctx.lineTo(100 + 4 * 120, 300 + 3 * 120);
-            ctx.lineTo(100 + 4 * 120, 300 + 1 * 120);
+            ctx.moveTo(pd + 7 * ds, hpd + 2 * ds);
+            ctx.lineTo(pd + 11 * ds, hpd + 2 * ds);
+            ctx.lineTo(pd + 11 * ds, hpd + 4 * ds);
+            ctx.lineTo(pd + 7 * ds, hpd + 4 * ds);
+            ctx.lineTo(pd + 7 * ds, hpd + 2 * ds);
             ctx.strokeStyle = "blue";
             ctx.lineWidth = 10;
             ctx.stroke();
