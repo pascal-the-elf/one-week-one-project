@@ -29,6 +29,7 @@ var Game = {
         "map": function() {
             var ds = 2200 / 27;
             var pd = 20, hpd = 300;
+            ctx.lineCap = "round";
             // Border
             ctx.beginPath();
             ctx.moveTo(pd, hpd);
