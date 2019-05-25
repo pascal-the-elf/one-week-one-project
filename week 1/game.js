@@ -89,6 +89,30 @@ var Game = {
             ctx.strokeStyle = "blue";
             ctx.lineWidth = 10;
             ctx.stroke();
+            
+            ctx.beginPath();
+            ctx.moveTo(pd + 2 * ds, hpd + 6 * ds);
+            ctx.lineTo(pd + 5 * ds, hpd + 6 * ds);
+            ctx.lineTo(pd + 5 * ds, hpd + 7 * ds);
+            ctx.lineTo(pd + 2 * ds, hpd + 7 * ds);
+            ctx.lineTo(pd + 2 * ds, hpd + 6 * ds);
+            ctx.strokeStyle = "blue";
+            ctx.lineWidth = 10;
+            ctx.stroke();
+            
+            ctx.beginPath();
+            ctx.moveTo(pd + 7 * ds, hpd + 6 * ds);
+            ctx.lineTo(pd + 8 * ds, hpd + 6 * ds);
+            ctx.lineTo(pd + 8 * ds, hpd + 9 * ds);
+            ctx.lineTo(pd + 11 * ds, hpd + 9 * ds);
+            ctx.lineTo(pd + 11 * ds, hpd + 10 * ds);
+            ctx.lineTo(pd + 8 * ds, hpd + 10 * ds);
+            ctx.lineTo(pd + 8 * ds, hpd + 13 * ds);
+            ctx.lineTo(pd + 7 * ds, hpd + 13 * ds);
+            ctx.lineTo(pd + 7 * ds, hpd + 6 * ds);
+            ctx.strokeStyle = "blue";
+            ctx.lineWidth = 10;
+            ctx.stroke();
         }
     },
     "data": {
