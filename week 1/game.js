@@ -39,6 +39,15 @@ var Game = {
             ctx.lineTo(27.5 + 19 * 115, 300 + 13 * 115);
             ctx.lineTo(27.5 + 19 * 115, 300 + 21 * 115);
             ctx.lineTo(27.5, 300 + 21 * 115);
+            ctx.lineTo(27.5, 300 + 13 * 115);
+            ctx.lineTo(27.5 + 3 * 115, 300 + 13 * 115);
+            ctx.lineTo(27.5 + 3 * 115, 300 + 11 * 115);
+            ctx.lineTo(27.5 - 1 * 115, 300 + 11 * 115);
+            ctx.lineTo(27.5 - 1 * 115, 300 + 9 * 115);
+            ctx.lineTo(27.5 + 3 * 115, 300 + 9 * 115);
+            ctx.lineTo(27.5 + 3 * 115, 300 + 7 * 115);
+            ctx.lineTo(27.5, 300 + 7 * 115);
+            ctx.lineTo(27.5, 300);
             ctx.strokeStyle = "blue";
             ctx.lineWidth = 10;
             ctx.stroke();
