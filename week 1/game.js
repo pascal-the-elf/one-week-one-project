@@ -204,6 +204,16 @@ var Game = {
             
             // bottom left blocks
             ctx.beginPath();
+            ctx.moveTo(pd + 7 * ds, hpd + 15 * ds);
+            ctx.lineTo(pd + 8 * ds, hpd + 15 * ds);
+            ctx.lineTo(pd + 8 * ds, hpd + 19 * ds);
+            ctx.lineTo(pd + 7 * ds, hpd + 19 * ds);
+            ctx.lineTo(pd + 7 * ds, hpd + 15 * ds);
+            ctx.strokeStyle = "blue";
+            ctx.lineWidth = 10;
+            ctx.stroke();
+            
+            ctx.beginPath();
             ctx.moveTo(pd + 2 * ds, hpd + 21 * ds);
             ctx.lineTo(pd + 5 * ds, hpd + 21 * ds);
             ctx.lineTo(pd + 5 * ds, hpd + 25 * ds);
@@ -240,6 +250,16 @@ var Game = {
             ctx.stroke();
             
             // bottom right blocks
+            ctx.beginPath();
+            ctx.moveTo(2220 - (7 * ds), hpd + 15 * ds);
+            ctx.lineTo(2220 - (8 * ds), hpd + 15 * ds);
+            ctx.lineTo(2220 - (8 * ds), hpd + 19 * ds);
+            ctx.lineTo(2220 - (7 * ds), hpd + 19 * ds);
+            ctx.lineTo(2220 - (7 * ds), hpd + 15 * ds);
+            ctx.strokeStyle = "blue";
+            ctx.lineWidth = 10;
+            ctx.stroke();
+            
             ctx.beginPath();
             ctx.moveTo(2220 - (2 * ds), hpd + 21 * ds);
             ctx.lineTo(2220 - (5 * ds), hpd + 21 * ds);
