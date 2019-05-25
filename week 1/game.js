@@ -1,5 +1,5 @@
-// 19 * 22 (19*100, 22*100)
-// 27.5 / 19*115 / 27.5
+// 17 * 20 (17*120, 20*120)
+// 100 / 17*120 / 100
 var Game = {
     "init": function() {
         ctx.font = "160px Arial";
@@ -28,47 +28,47 @@ var Game = {
         "map": function() {
             // Border
             ctx.beginPath();
-            ctx.moveTo(27.5, 300);
-            ctx.lineTo(27.5 + 19 * 115, 300);
-            ctx.lineTo(27.5 + 19 * 115, 300 + 7 * 115);
-            ctx.lineTo(27.5 + 16 * 115, 300 + 7 * 115);
-            ctx.lineTo(27.5 + 16 * 115, 300 + 9 * 115);
-            ctx.lineTo(27.5 + 20 * 115, 300 + 9 * 115);
-            ctx.lineTo(27.5 + 20 * 115, 300 + 11 * 115);
-            ctx.lineTo(27.5 + 16 * 115, 300 + 11 * 115);
-            ctx.lineTo(27.5 + 16 * 115, 300 + 13 * 115);
-            ctx.lineTo(27.5 + 19 * 115, 300 + 13 * 115);
-            ctx.lineTo(27.5 + 19 * 115, 300 + 21 * 115);
-            ctx.lineTo(27.5, 300 + 21 * 115);
-            ctx.lineTo(27.5, 300 + 13 * 115);
-            ctx.lineTo(27.5 + 3 * 115, 300 + 13 * 115);
-            ctx.lineTo(27.5 + 3 * 115, 300 + 11 * 115);
-            ctx.lineTo(27.5 - 1 * 115, 300 + 11 * 115);
-            ctx.lineTo(27.5 - 1 * 115, 300 + 9 * 115);
-            ctx.lineTo(27.5 + 3 * 115, 300 + 9 * 115);
-            ctx.lineTo(27.5 + 3 * 115, 300 + 7 * 115);
-            ctx.lineTo(27.5, 300 + 7 * 115);
-            ctx.lineTo(27.5, 300);
+            ctx.moveTo(100, 300);
+            ctx.lineTo(100 + 17 * 120, 300);
+            ctx.lineTo(100 + 17 * 120, 300 + 5 * 120);
+            ctx.lineTo(100 + 14 * 120, 300 + 5 * 120);
+            ctx.lineTo(100 + 14 * 120, 300 + 7 * 120);
+            ctx.lineTo(100 + 18 * 120, 300 + 7 * 120);
+            ctx.lineTo(100 + 18 * 120, 300 + 9 * 120);
+            ctx.lineTo(100 + 14 * 120, 300 + 9 * 120);
+            ctx.lineTo(100 + 14 * 120, 300 + 11 * 120);
+            ctx.lineTo(100 + 17 * 120, 300 + 11 * 120);
+            ctx.lineTo(100 + 17 * 120, 300 + 19 * 120);
+            ctx.lineTo(100, 300 + 19 * 120);
+            ctx.lineTo(100, 300 + 11 * 120);
+            ctx.lineTo(100 + 3 * 120, 300 + 11 * 120);
+            ctx.lineTo(100 + 3 * 120, 300 + 9 * 120);
+            ctx.lineTo(100 - 1 * 120, 300 + 9 * 120);
+            ctx.lineTo(100 - 1 * 120, 300 + 7 * 120);
+            ctx.lineTo(100 + 3 * 120, 300 + 7 * 120);
+            ctx.lineTo(100 + 3 * 120, 300 + 5 * 120);
+            ctx.lineTo(100, 300 + 5 * 120);
+            ctx.lineTo(100, 300);
             ctx.strokeStyle = "blue";
             ctx.lineWidth = 10;
             ctx.stroke();
             // Blocks
             ctx.beginPath();
-            ctx.moveTo(27.5 + 2 * 115, 300 + 2 * 115);
-            ctx.lineTo(27.5 + 3 * 115, 300 + 2 * 115);
-            ctx.lineTo(27.5 + 3 * 115, 300 + 3 * 115);
-            ctx.lineTo(27.5 + 2 * 115, 300 + 3 * 115);
-            ctx.lineTo(27.5 + 2 * 115, 300 + 2 * 115);
+            ctx.moveTo(100 + 1 * 120, 300 + 1 * 120);
+            ctx.lineTo(100 + 3 * 120, 300 + 1 * 120);
+            ctx.lineTo(100 + 3 * 120, 300 + 3 * 120);
+            ctx.lineTo(100 + 1 * 120, 300 + 3 * 120);
+            ctx.lineTo(100 + 1 * 120, 300 + 1 * 120);
             ctx.strokeStyle = "blue";
             ctx.lineWidth = 10;
             ctx.stroke();
             
             ctx.beginPath();
-            ctx.moveTo(27.5 + 5 * 115, 300 + 2 * 115);
-            ctx.lineTo(27.5 + 7 * 115, 300 + 2 * 115);
-            ctx.lineTo(27.5 + 7 * 115, 300 + 3 * 115);
-            ctx.lineTo(27.5 + 5 * 115, 300 + 3 * 115);
-            ctx.lineTo(27.5 + 5 * 115, 300 + 2 * 115);
+            ctx.moveTo(100 + 4 * 120, 300 + 1 * 120);
+            ctx.lineTo(100 + 7 * 120, 300 + 1 * 120);
+            ctx.lineTo(100 + 7 * 120, 300 + 3 * 120);
+            ctx.lineTo(100 + 4 * 120, 300 + 3 * 120);
+            ctx.lineTo(100 + 4 * 120, 300 + 1 * 120);
             ctx.strokeStyle = "blue";
             ctx.lineWidth = 10;
             ctx.stroke();
