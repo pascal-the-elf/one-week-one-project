@@ -158,6 +158,49 @@ var Game = {
             ctx.strokeStyle = "blue";
             ctx.lineWidth = 10;
             ctx.stroke();
+            
+            // 3 center blocks
+            ctx.beginPath();
+            ctx.moveTo(pd + 10 * ds, hpd + 6 * ds);
+            ctx.lineTo(pd + 17 * ds, hpd + 6 * ds);
+            ctx.lineTo(pd + 17 * ds, hpd + 7 * ds);
+            ctx.lineTo(pd + 14 * ds, hpd + 7 * ds);
+            ctx.lineTo(pd + 14 * ds, hpd + 10 * ds);
+            ctx.lineTo(pd + 13 * ds, hpd + 10 * ds);
+            ctx.lineTo(pd + 13 * ds, hpd + 7 * ds);
+            ctx.lineTo(pd + 10 * ds, hpd + 7 * ds);
+            ctx.lineTo(pd + 10 * ds, hpd + 6 * ds);
+            ctx.strokeStyle = "blue";
+            ctx.lineWidth = 10;
+            ctx.stroke();
+            
+            ctx.beginPath();
+            ctx.moveTo(pd + 10 * ds, hpd + 18 * ds);
+            ctx.lineTo(pd + 17 * ds, hpd + 18 * ds);
+            ctx.lineTo(pd + 17 * ds, hpd + 19 * ds);
+            ctx.lineTo(pd + 14 * ds, hpd + 19 * ds);
+            ctx.lineTo(pd + 14 * ds, hpd + 22 * ds);
+            ctx.lineTo(pd + 13 * ds, hpd + 22 * ds);
+            ctx.lineTo(pd + 13 * ds, hpd + 19 * ds);
+            ctx.lineTo(pd + 10 * ds, hpd + 19 * ds);
+            ctx.lineTo(pd + 10 * ds, hpd + 18 * ds);
+            ctx.strokeStyle = "blue";
+            ctx.lineWidth = 10;
+            ctx.stroke();
+            
+            ctx.beginPath();
+            ctx.moveTo(pd + 10 * ds, hpd + 24 * ds);
+            ctx.lineTo(pd + 17 * ds, hpd + 24 * ds);
+            ctx.lineTo(pd + 17 * ds, hpd + 25 * ds);
+            ctx.lineTo(pd + 14 * ds, hpd + 25 * ds);
+            ctx.lineTo(pd + 14 * ds, hpd + 28 * ds);
+            ctx.lineTo(pd + 13 * ds, hpd + 28 * ds);
+            ctx.lineTo(pd + 13 * ds, hpd + 25 * ds);
+            ctx.lineTo(pd + 10 * ds, hpd + 25 * ds);
+            ctx.lineTo(pd + 10 * ds, hpd + 24 * ds);
+            ctx.strokeStyle = "blue";
+            ctx.lineWidth = 10;
+            ctx.stroke();
         }
     },
     "data": {
