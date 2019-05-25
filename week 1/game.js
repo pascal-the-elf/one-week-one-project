@@ -26,6 +26,7 @@ var Game = {
             ctx.fillText(Game.data.life, 1550, 120*2);
         },
         "map": function() {
+            // Border
             ctx.beginPath();
             ctx.moveTo(27.5, 300);
             ctx.lineTo(27.5 + 19 * 115, 300);
@@ -48,6 +49,26 @@ var Game = {
             ctx.lineTo(27.5 + 3 * 115, 300 + 7 * 115);
             ctx.lineTo(27.5, 300 + 7 * 115);
             ctx.lineTo(27.5, 300);
+            ctx.strokeStyle = "blue";
+            ctx.lineWidth = 10;
+            ctx.stroke();
+            // Blocks
+            ctx.beginPath();
+            ctx.moveTo(27.5 + 2 * 115, 300 + 2 * 115);
+            ctx.lineTo(27.5 + 3 * 115, 300 + 2 * 115);
+            ctx.lineTo(27.5 + 3 * 115, 300 + 3 * 115);
+            ctx.lineTo(27.5 + 2 * 115, 300 + 3 * 115);
+            ctx.lineTo(27.5 + 2 * 115, 300 + 2 * 115);
+            ctx.strokeStyle = "blue";
+            ctx.lineWidth = 10;
+            ctx.stroke();
+            
+            ctx.beginPath();
+            ctx.moveTo(27.5 + 5 * 115, 300 + 2 * 115);
+            ctx.lineTo(27.5 + 7 * 115, 300 + 2 * 115);
+            ctx.lineTo(27.5 + 7 * 115, 300 + 3 * 115);
+            ctx.lineTo(27.5 + 5 * 115, 300 + 3 * 115);
+            ctx.lineTo(27.5 + 5 * 115, 300 + 2 * 115);
             ctx.strokeStyle = "blue";
             ctx.lineWidth = 10;
             ctx.stroke();
