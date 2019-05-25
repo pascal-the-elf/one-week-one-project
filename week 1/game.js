@@ -302,10 +302,10 @@ var Game = {
             ctx.lineTo(pd + 10 * ds, hpd + 12 * ds);
             ctx.lineTo(pd + 10 * ds, hpd + 16 * ds);
             ctx.lineTo(pd + 17 * ds, hpd + 16 * ds);
-            ctx.lineTo(pd + 17 * ds, hpd + 10 * ds);
-            ctx.lineTo(pd + 15 * ds, hpd + 10 * ds);
+            ctx.lineTo(pd + 17 * ds, hpd + 12 * ds);
+            ctx.lineTo(pd + 15 * ds, hpd + 12 * ds);
             ctx.strokeStyle = "blue";
-            ctx.lineWidth = 10;
+            ctx.lineWidth = 20;
             ctx.stroke();
         }
     },
