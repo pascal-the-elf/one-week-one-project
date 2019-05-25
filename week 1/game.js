@@ -113,6 +113,51 @@ var Game = {
             ctx.strokeStyle = "blue";
             ctx.lineWidth = 10;
             ctx.stroke();
+            
+            // miror 1
+            ctx.beginPath();
+            ctx.moveTo(2220 - (2 * ds), hpd + 2 * ds);
+            ctx.lineTo(2220 - (5 * ds), hpd + 2 * ds);
+            ctx.lineTo(2220 - (5 * ds), hpd + 4 * ds);
+            ctx.lineTo(2220 - (2 * ds), hpd + 4 * ds);
+            ctx.lineTo(2220 - (2 * ds), hpd + 2 * ds);
+            ctx.strokeStyle = "blue";
+            ctx.lineWidth = 10;
+            ctx.stroke();
+            
+            ctx.beginPath();
+            ctx.moveTo(2220 - (7 * ds), hpd + 2 * ds);
+            ctx.lineTo(2220 - (11 * ds), hpd + 2 * ds);
+            ctx.lineTo(2220 - (11 * ds), hpd + 4 * ds);
+            ctx.lineTo(2220 - (7 * ds), hpd + 4 * ds);
+            ctx.lineTo(2220 - (7 * ds), hpd + 2 * ds);
+            ctx.strokeStyle = "blue";
+            ctx.lineWidth = 10;
+            ctx.stroke();
+            
+            ctx.beginPath();
+            ctx.moveTo(2220 - (2 * ds), hpd + 6 * ds);
+            ctx.lineTo(2220 - (5 * ds), hpd + 6 * ds);
+            ctx.lineTo(2220 - (5 * ds), hpd + 7 * ds);
+            ctx.lineTo(2220 - (2 * ds), hpd + 7 * ds);
+            ctx.lineTo(2220 - (2 * ds), hpd + 6 * ds);
+            ctx.strokeStyle = "blue";
+            ctx.lineWidth = 10;
+            ctx.stroke();
+            
+            ctx.beginPath();
+            ctx.moveTo(2220 - (7 * ds), hpd + 6 * ds);
+            ctx.lineTo(2220 - (8 * ds), hpd + 6 * ds);
+            ctx.lineTo(2220 - (8 * ds), hpd + 9 * ds);
+            ctx.lineTo(2220 - (11 * ds), hpd + 9 * ds);
+            ctx.lineTo(2220 - (11 * ds), hpd + 10 * ds);
+            ctx.lineTo(2220 - (8 * ds), hpd + 10 * ds);
+            ctx.lineTo(2220 - (8 * ds), hpd + 13 * ds);
+            ctx.lineTo(2220 - (7 * ds), hpd + 13 * ds);
+            ctx.lineTo(2220 - (7 * ds), hpd + 6 * ds);
+            ctx.strokeStyle = "blue";
+            ctx.lineWidth = 10;
+            ctx.stroke();
         }
     },
     "data": {
