@@ -238,6 +238,43 @@ var Game = {
             ctx.strokeStyle = "blue";
             ctx.lineWidth = 10;
             ctx.stroke();
+            
+            // bottom right blocks
+            ctx.beginPath();
+            ctx.moveTo(2220 - (2 * ds), hpd + 21 * ds);
+            ctx.lineTo(2220 - (5 * ds), hpd + 21 * ds);
+            ctx.lineTo(2220 - (5 * ds), hpd + 25 * ds);
+            ctx.lineTo(2220 - (4 * ds), hpd + 25 * ds);
+            ctx.lineTo(2220 - (4 * ds), hpd + 22 * ds);
+            ctx.lineTo(2220 - (2 * ds), hpd + 22 * ds);
+            ctx.lineTo(2220 - (2 * ds), hpd + 21 * ds);
+            ctx.strokeStyle = "blue";
+            ctx.lineWidth = 10;
+            ctx.stroke();
+            
+            ctx.beginPath();
+            ctx.moveTo(2220 - (7 * ds), hpd + 21 * ds);
+            ctx.lineTo(2220 - (11 * ds), hpd + 21 * ds);
+            ctx.lineTo(2220 - (11 * ds), hpd + 22 * ds);
+            ctx.lineTo(2220 - (7 * ds), hpd + 22 * ds);
+            ctx.lineTo(2220 - (7 * ds), hpd + 21 * ds);
+            ctx.strokeStyle = "blue";
+            ctx.lineWidth = 10;
+            ctx.stroke();
+            
+            ctx.beginPath();
+            ctx.moveTo(2220 - (7 * ds), hpd + 24 * ds);
+            ctx.lineTo(2220 - (8 * ds), hpd + 24 * ds);
+            ctx.lineTo(2220 - (8 * ds), hpd + 27 * ds);
+            ctx.lineTo(2220 - (11 * ds), hpd + 27 * ds);
+            ctx.lineTo(2220 - (11 * ds), hpd + 28 * ds);
+            ctx.lineTo(2220 - (2 * ds), hpd + 28 * ds);
+            ctx.lineTo(2220 - (2 * ds), hpd + 27 * ds);
+            ctx.lineTo(2220 - (7 * ds), hpd + 27 * ds);
+            ctx.lineTo(2220 - (7 * ds), hpd + 24 * ds);
+            ctx.strokeStyle = "blue";
+            ctx.lineWidth = 10;
+            ctx.stroke();
         }
     },
     "data": {
