@@ -201,6 +201,43 @@ var Game = {
             ctx.strokeStyle = "blue";
             ctx.lineWidth = 10;
             ctx.stroke();
+            
+            // bottom left blocks
+            ctx.beginPath();
+            ctx.moveTo(pd + 2 * ds, hpd + 21 * ds);
+            ctx.lineTo(pd + 5 * ds, hpd + 21 * ds);
+            ctx.lineTo(pd + 5 * ds, hpd + 25 * ds);
+            ctx.lineTo(pd + 4 * ds, hpd + 25 * ds);
+            ctx.lineTo(pd + 4 * ds, hpd + 22 * ds);
+            ctx.lineTo(pd + 2 * ds, hpd + 22 * ds);
+            ctx.lineTo(pd + 2 * ds, hpd + 21 * ds);
+            ctx.strokeStyle = "blue";
+            ctx.lineWidth = 10;
+            ctx.stroke();
+            
+            ctx.beginPath();
+            ctx.moveTo(pd + 7 * ds, hpd + 21 * ds);
+            ctx.lineTo(pd + 11 * ds, hpd + 21 * ds);
+            ctx.lineTo(pd + 11 * ds, hpd + 22 * ds);
+            ctx.lineTo(pd + 7 * ds, hpd + 22 * ds);
+            ctx.lineTo(pd + 7 * ds, hpd + 21 * ds);
+            ctx.strokeStyle = "blue";
+            ctx.lineWidth = 10;
+            ctx.stroke();
+            
+            ctx.beginPath();
+            ctx.moveTo(pd + 7 * ds, hpd + 24 * ds);
+            ctx.lineTo(pd + 8 * ds, hpd + 24 * ds);
+            ctx.lineTo(pd + 8 * ds, hpd + 27 * ds);
+            ctx.lineTo(pd + 11 * ds, hpd + 27 * ds);
+            ctx.lineTo(pd + 11 * ds, hpd + 28 * ds);
+            ctx.lineTo(pd + 2 * ds, hpd + 28 * ds);
+            ctx.lineTo(pd + 2 * ds, hpd + 27 * ds);
+            ctx.lineTo(pd + 7 * ds, hpd + 27 * ds);
+            ctx.lineTo(pd + 7 * ds, hpd + 24 * ds);
+            ctx.strokeStyle = "blue";
+            ctx.lineWidth = 10;
+            ctx.stroke();
         }
     },
     "data": {
