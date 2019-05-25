@@ -307,6 +307,12 @@ var Game = {
             ctx.strokeStyle = "blue";
             ctx.lineWidth = 20;
             ctx.stroke();
+            ctx.beginPath();
+            ctx.moveTo(pd + 12 * ds, hpd + 12 * ds);
+            ctx.lineTo(pd + 15 * ds, hpd + 12 * ds);
+            ctx.strokeStyle = "pink";
+            ctx.lineWidth = 10;
+            ctx.stroke();
         }
     },
     "data": {
