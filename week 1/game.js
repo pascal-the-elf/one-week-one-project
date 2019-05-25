@@ -69,7 +69,7 @@ var Game = {
             ctx.lineWidth = 10;
             ctx.stroke();
             
-            // Blocks
+            // top left blocks
             ctx.beginPath();
             ctx.moveTo(pd + 2 * ds, hpd + 2 * ds);
             ctx.lineTo(pd + 5 * ds, hpd + 2 * ds);
@@ -114,7 +114,7 @@ var Game = {
             ctx.lineWidth = 10;
             ctx.stroke();
             
-            // miror 1
+            // top right blocks
             ctx.beginPath();
             ctx.moveTo(2220 - (2 * ds), hpd + 2 * ds);
             ctx.lineTo(2220 - (5 * ds), hpd + 2 * ds);
@@ -159,7 +159,7 @@ var Game = {
             ctx.lineWidth = 10;
             ctx.stroke();
             
-            // 3 center blocks
+            // center blocks
             ctx.beginPath();
             ctx.moveTo(pd + 10 * ds, hpd + 6 * ds);
             ctx.lineTo(pd + 17 * ds, hpd + 6 * ds);
@@ -292,6 +292,18 @@ var Game = {
             ctx.lineTo(2220 - (2 * ds), hpd + 27 * ds);
             ctx.lineTo(2220 - (7 * ds), hpd + 27 * ds);
             ctx.lineTo(2220 - (7 * ds), hpd + 24 * ds);
+            ctx.strokeStyle = "blue";
+            ctx.lineWidth = 10;
+            ctx.stroke();
+            
+            // home
+            ctx.beginPath();
+            ctx.moveTo(pd + 12 * ds, hpd + 12 * ds);
+            ctx.lineTo(pd + 10 * ds, hpd + 12 * ds);
+            ctx.lineTo(pd + 10 * ds, hpd + 16 * ds);
+            ctx.lineTo(pd + 17 * ds, hpd + 16 * ds);
+            ctx.lineTo(pd + 17 * ds, hpd + 10 * ds);
+            ctx.lineTo(pd + 15 * ds, hpd + 10 * ds);
             ctx.strokeStyle = "blue";
             ctx.lineWidth = 10;
             ctx.stroke();
