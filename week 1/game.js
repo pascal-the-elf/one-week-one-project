@@ -13,6 +13,22 @@ var Game = {
         this.data.high = localStorage.PacManHigh ? localStorage.PacManHigh : 0;
         setTimeout(function() { Game.draw.start(); }, 1000);
     },
+    "control": {
+        "Go": {
+            "left": function() {
+                Game.data.PacMan.dir = 0;
+            },
+            "up": function() {
+                Game.data.PacMan.dir = 1;
+            },
+            "right": function() {
+                Game.data.PacMan.dir = 2;
+            },
+            "down": function() {
+                Game.data.PacMan.dir = 3;
+            }
+        }
+    },
     "draw": {
         "start": function() {
             ctx.fillStyle = "#000";
@@ -361,6 +377,9 @@ var Game = {
         "stage": 0,
         "score": 0,
         "life": 3,
-        "high": 0
+        "high": 0,
+        "PacMan": {
+            "dir": 0
+        }
     }
 };
