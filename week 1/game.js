@@ -56,11 +56,11 @@ var Game = {
             ghostsImgs.blinky.src = "res/blinky.svg";
             ghostsImgs.blinky.onload = function() {ctx.drawImage(ghostsImgs.blinky, (2240/2)-(2200/27)*0.8, 220+11*(2200/27)-(2200/27)*0.8, (2200/27)*1.6,(2200/27)*1.6)};
             ghostsImgs.pinky.src = "res/pinky.svg";
-            ghostsImgs.blinky.onload = function() {ctx.drawImage(ghostsImgs.pinky, (2240/2)-(2200/27)*0.8, 220+14*(2200/27)-(2200/27)*0.8, (2200/27)*1.6,(2200/27)*1.6)};
+            ghostsImgs.pinky.onload = function() {ctx.drawImage(ghostsImgs.pinky, (2240/2)-(2200/27)*0.8, 220+14*(2200/27)-(2200/27)*0.8, (2200/27)*1.6,(2200/27)*1.6)};
             ghostsImgs.inky.src = "res/inky.svg";
-            ghostsImgs.blinky.onload = function() {ctx.drawImage(ghostsImgs.inky, (2240/2)-(2200/27)*2.8, 220+14*(2200/27)-(2200/27)*0.8, (2200/27)*1.6,(2200/27)*1.6)};
+            ghostsImgs.inky.onload = function() {ctx.drawImage(ghostsImgs.inky, (2240/2)-(2200/27)*2.8, 220+14*(2200/27)-(2200/27)*0.8, (2200/27)*1.6,(2200/27)*1.6)};
             ghostsImgs.clyde.src = "res/clyde.svg";
-            ghostsImgs.blinky.onload = function() {ctx.drawImage(ghostsImgs.clyde, (2240/2)-(2200/27)*(-1.2), 220+14*(2200/27)-(2200/27)*0.8, (2200/27)*1.6,(2200/27)*1.6)};
+            ghostsImgs.clyde.onload = function() {ctx.drawImage(ghostsImgs.clyde, (2240/2)-(2200/27)*(-1.2), 220+14*(2200/27)-(2200/27)*0.8, (2200/27)*1.6,(2200/27)*1.6)};
         },
         "map": function() {
             var ds = 2200 / 27;
