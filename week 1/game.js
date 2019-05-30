@@ -1,4 +1,10 @@
 // dot-space: 27 * 30
+document.addEventListener("keydown", function(event){
+    if(event.keyCode == 37) Game.control.Go.left();
+    if(event.keyCode == 38) Game.control.Go.up();
+    if(event.keyCode == 39) Game.control.Go.right();
+    if(event.keyCode == 40) Game.control.Go.down();
+});
 var Game = {
     "init": function() {
         ctx.font = "160px Arial";
