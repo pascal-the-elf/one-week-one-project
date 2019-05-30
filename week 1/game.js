@@ -17,12 +17,35 @@ var Game = {
             ctx.fillText("Life", 1550, 100);
             this.update();
             this.map();
+            this.chars();
         },
         "update" : function() {
             ctx.fillStyle = "#fff";
             ctx.fillText(Game.data.high, 50, 100*2);
             ctx.fillText(Game.data.score, 800, 100*2);
             ctx.fillText(Game.data.life, 1550, 100*2);
+            
+            ctx.fillStyle = "#000";
+            ctx.fillRect(0, 2680, 2240, 200);
+            for(var i = 1; i < Game.data.life; i++) {
+                ctx.fillStyle = "yellow";
+                ctx.beginPath();
+                ctx.moveTo(200*i, 2780);
+                ctx.arc(200*i, 2780, (2200/27)*0.8, Math.PI*(202.5/180), Math.PI*(157.5/180));
+                ctx.closePath();
+                ctx.fill();
+            }
+            var img = new Image();
+            img.src = "https://smhttp-ssl-83739.nexcesscdn.net/pub/media/product/33edd0/cherry.png";
+            img.onload = function() {ctx.drawImage(img,2000,2680,180,180);};
+        },
+        "chars": function() {
+            ctx.fillStyle = "yellow";
+            ctx.beginPath();
+            ctx.moveTo(2240/2, 220+23*(2200/27));
+            ctx.arc(2240/2, 220+23*(2200/27), (2200/27)*0.8, Math.PI*(202.5/180), Math.PI*(157.5/180));
+            ctx.closePath();
+            ctx.fill();
         },
         "map": function() {
             var ds = 2200 / 27;
