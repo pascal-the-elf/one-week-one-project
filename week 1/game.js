@@ -379,7 +379,8 @@ var Game = {
         "life": 3,
         "high": 0,
         "PacMan": {
-            "dir": 0
+            "dir": 0,
+            "strong": 0
         }
     }
 };
