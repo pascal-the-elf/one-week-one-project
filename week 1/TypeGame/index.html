@@ -30,12 +30,12 @@
     <script>
         var TG = {
             "init": function() {
-                this.objects.ans = document.getElementById("ans");
-                this.objects.Q = document.getElementById("q");
-                this.objects.Alert = document.getElementById("alert");
-                this.objects.timer = document.getElementById("timer");
+                const this.objects.ans = document.getElementById("ans");
+                const this.objects.Q = document.getElementById("q");
+                const this.objects.Alert = document.getElementById("alert");
+                const this.objects.timer = document.getElementById("timer");
                 this.objects.ans.onkeyup = () => {TG.KeyUp(event)};
-                Alert("Are You Ready?", "Press 'Yes' To Start", "question", {"show": true, "text": "Yes"}, {"show": false}, (r)={
+                Alert("Are You Ready?", "Press 'Yes' To Start", "question", {"show": true, "text": "Yes"}, {"show": false}, ()=>{
                     TG.nextQ();
                 });
             },
@@ -55,7 +55,7 @@
                 }
             },
             "nextQ": function() {
-                if(!TG.timer.used) TG.timer.start();
+                if(!timer.used) TG.timer.start();
                 var length = 10 + Math.floor(Math.random()*20);
                 var q = "";
                 while(length--) {
@@ -77,17 +77,17 @@
                 "used": 0,
                 "time": 180,
                 "start": function() {
-                    TG.timer.used = 1;
+                    this.used = 1;
                     setInterval(() => {
-                        if(TG.timer.time) {
-                            TG.timer.time--;
-                            TG.objects.timer.innerHTML = "Timer: " + TG.timer.time;
+                        if(this.time) {
+                            this.time--;
+                            TG.objects.timer.innerHTML = "Timer: " + this.time;
                         }
-                        else TG.timer.stop();
+                        else this.stop();
                     }, 1000);
                 },
                 "stop": function() {
-                    TG.timer.time--;
+                    this.time--;
                     TG.objects.ans.disabled = true;
                     Alert("Time's UP!", "Your Score is " + TG.data.score + "!", "success", {"show": true, "text": "OK"}, {"show": false});
                 }
@@ -98,7 +98,6 @@
             },
             "objects" : {}
         };
-        TG.init();
     </script>
 </body>
 </html>
