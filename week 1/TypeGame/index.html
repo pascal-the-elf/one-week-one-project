@@ -35,7 +35,7 @@
                 const this.objects.Alert = document.getElementById("alert");
                 const this.objects.timer = document.getElementById("timer");
                 this.objects.ans.onkeyup = () => {TG.KeyUp(event)};
-                Alert("Are You Ready?", "Press 'Yes' To Start", "question", {"show": true, "text": "Yes"}, {"show": false}, ()={
+                Alert("Are You Ready?", "Press 'Yes' To Start", "question", {"show": true, "text": "Yes"}, {"show": false}, (r)={
                     TG.nextQ();
                 });
             },
