@@ -30,10 +30,10 @@
     <script>
         var TG = {
             "init": function() {
-                const this.objects.ans = document.getElementById("ans");
-                const this.objects.Q = document.getElementById("q");
-                const this.objects.Alert = document.getElementById("alert");
-                const this.objects.timer = document.getElementById("timer");
+                this.objects.ans = document.getElementById("ans");
+                this.objects.Q = document.getElementById("q");
+                this.objects.Alert = document.getElementById("alert");
+                this.objects.timer = document.getElementById("timer");
                 this.objects.ans.onkeyup = () => {TG.KeyUp(event)};
                 Alert("Are You Ready?", "Press 'Yes' To Start", "question", {"show": true, "text": "Yes"}, {"show": false}, ()=>{
                     TG.nextQ();
