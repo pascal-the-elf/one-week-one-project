@@ -26,6 +26,7 @@
     <h1>Type Game</h1>
     <h3 id="q"></h3>
     <input id="ans" type="text" />
+    <p id="highest"></p>
     <p id="alert"></p>
     <p id="timer"></p>
     <script>
@@ -34,6 +35,8 @@
                 this.objects.ans = document.getElementById("ans");
                 this.objects.Q = document.getElementById("q");
                 this.objects.Alert = document.getElementById("alert");
+                this.objects.Highest = document.getElementById("highest");
+                this.objects.Highest.innerHTML = "Highest: " + this.data.highest;
                 this.objects.timer = document.getElementById("timer");
                 this.objects.ans.onkeyup = () => {TG.KeyUp(event)};
                 Alert("Are You Ready?", "Press 'Yes' To Start", "question", {"show": true, "text": "Yes"}, {"show": false}, ()=>{
@@ -74,6 +77,12 @@
             "wrongA": function() {
                 this.objects.Alert.innerHTML = "Wrong Answer";
             },
+            "save": function() {
+                let DATA = {
+                    "highest": (this.data.score > this.data.highest) ? this.data.score : this.data.highest
+                };
+                localStorage.TG = JSON.stringify(DATA);
+            },
             "timer": {
                 "used": 0,
                 "time": 180,
@@ -92,10 +101,14 @@
                     clearInterval(this.interval);
                     TG.objects.ans.disabled = true;
                     Alert("Time's UP!", "Your Score is " + TG.data.score + "!", "success", {"show": true, "text": "OK"}, {"show": false});
+                    TG.save();
+                    TG.data.highest = JSON.parse(localStorage.TG).highest;
+                    this.objects.Highest.innerHTML = "Highest: " + TG.data.highest;
                 }
             },
             "data": {
                 "score": 0,
+                "highest": localStorage.TG ? JSON.parse(localStorage.TG).highest : 0,
                 "question": "Question"
             },
             "objects" : {}
