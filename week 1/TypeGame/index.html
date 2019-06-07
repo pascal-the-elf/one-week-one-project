@@ -55,7 +55,7 @@
                 }
             },
             "nextQ": function() {
-                if(!timer.used) TG.timer.start();
+                if(!TG.timer.used) TG.timer.start();
                 var length = 10 + Math.floor(Math.random()*20);
                 var q = "";
                 while(length--) {
@@ -77,17 +77,17 @@
                 "used": 0,
                 "time": 180,
                 "start": function() {
-                    this.used = 1;
+                    TG.timer.used = 1;
                     setInterval(() => {
-                        if(this.time) {
-                            this.time--;
-                            TG.objects.timer.innerHTML = "Timer: " + this.time;
+                        if(TG.timer.time) {
+                            TG.timer.time--;
+                            TG.objects.timer.innerHTML = "Timer: " + TG.timer.time;
                         }
-                        else this.stop();
+                        else TG.timer.stop();
                     }, 1000);
                 },
                 "stop": function() {
-                    this.time--;
+                    TG.timer.time--;
                     TG.objects.ans.disabled = true;
                     Alert("Time's UP!", "Your Score is " + TG.data.score + "!", "success", {"show": true, "text": "OK"}, {"show": false});
                 }
@@ -98,6 +98,7 @@
             },
             "objects" : {}
         };
+        TG.init();
     </script>
 </body>
 </html>
