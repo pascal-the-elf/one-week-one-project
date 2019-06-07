@@ -16,6 +16,7 @@
         }
         #ans {
             width: 100%;
+            font-size: 1.4rem;
         }
     </style>
     <meta charset="UTF-8">
@@ -36,34 +37,34 @@
                 this.objects.timer = document.getElementById("timer");
                 this.objects.ans.onkeyup = () => {TG.KeyUp(event)};
                 Alert("Are You Ready?", "Press 'Yes' To Start", "question", {"show": true, "text": "Yes"}, {"show": false}, ()=>{
-                    TG.nextQ();
+                    this.nextQ();
                 });
             },
             "KeyUp": function(event) {
                 var key = event.which || event.keyCode;
                 if(key == 13) {
-                    TG.check();
+                    this.check();
                 }
             },
             "check": function() {
-                if(TG.objects.ans.value === TG.data.question) {
-                    TG.data.score += 10;
-                    TG.objects.Alert.innerHTML = "Score: " + TG.data.score;
-                    TG.nextQ();
+                if(this.objects.ans.value === this.data.question) {
+                    this.data.score += 10;
+                    this.objects.Alert.innerHTML = "Score: " + this.data.score;
+                    this.nextQ();
                 } else {
-                    TG.wrongA();
+                    this.wrongA();
                 }
             },
             "nextQ": function() {
-                if(!timer.used) TG.timer.start();
+                if(!this.timer.used) this.timer.start();
                 var length = 10 + Math.floor(Math.random()*20);
                 var q = "";
                 while(length--) {
-                    q += TG.genWord();
+                    q += this.genWord();
                 }
-                TG.data.question = q;
-                TG.objects.Q.innerHTML = q;
-                TG.objects.ans.value = "";
+                this.data.question = q;
+                this.objects.Q.innerHTML = q;
+                this.objects.ans.value = "";
             },
             "genWord": function() {
                 var dic = "abcdefghijklmnopqrstuvxyzABCDEFGHIJKLMNOPQRSTUVXYZ0123456789?!.";
@@ -71,14 +72,14 @@
                 return dic.charAt(rand);
             },
             "wrongA": function() {
-                TG.objects.Alert.innerHTML = "Wrong Answer";
+                this.objects.Alert.innerHTML = "Wrong Answer";
             },
             "timer": {
                 "used": 0,
                 "time": 180,
                 "start": function() {
                     this.used = 1;
-                    setInterval(() => {
+                    this.interval = setInterval(() => {
                         if(this.time) {
                             this.time--;
                             TG.objects.timer.innerHTML = "Timer: " + this.time;
@@ -88,6 +89,7 @@
                 },
                 "stop": function() {
                     this.time--;
+                    clearInterval(this.interval);
                     TG.objects.ans.disabled = true;
                     Alert("Time's UP!", "Your Score is " + TG.data.score + "!", "success", {"show": true, "text": "OK"}, {"show": false});
                 }
@@ -98,6 +100,7 @@
             },
             "objects" : {}
         };
+        TG.init();
     </script>
 </body>
 </html>
