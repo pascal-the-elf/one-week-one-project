@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
     <script src="easySA.js"></script>
+    <script src="main.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Baloo" rel="stylesheet">
     <style>
         body, h1, h2, h3, h4, h5, h6, p, span, a {
@@ -30,89 +31,6 @@
     <p id="alert"></p>
     <p id="timer"></p>
     <script>
-        var TG = {
-            "init": function() {
-                this.objects.ans = document.getElementById("ans");
-                this.objects.Q = document.getElementById("q");
-                this.objects.Alert = document.getElementById("alert");
-                this.objects.Highest = document.getElementById("highest");
-                this.objects.Highest.innerHTML = "Highest: " + this.data.highest;
-                this.objects.timer = document.getElementById("timer");
-                this.objects.ans.onkeyup = () => {TG.KeyUp(event)};
-                Alert("Are You Ready?", "Press 'Yes' To Start", "question", {"show": true, "text": "Yes"}, {"show": false}, ()=>{
-                    this.nextQ();
-                });
-            },
-            "KeyUp": function(event) {
-                var key = event.which || event.keyCode;
-                if(key == 13) {
-                    this.check();
-                }
-            },
-            "check": function() {
-                if(this.objects.ans.value === this.data.question) {
-                    this.data.score += 10;
-                    this.objects.Alert.innerHTML = "Score: " + this.data.score;
-                    this.nextQ();
-                } else {
-                    this.wrongA();
-                }
-            },
-            "nextQ": function() {
-                if(!this.timer.used) this.timer.start();
-                var length = 10 + Math.floor(Math.random()*20);
-                var q = "";
-                while(length--) {
-                    q += this.genWord();
-                }
-                this.data.question = q;
-                this.objects.Q.innerHTML = q;
-                this.objects.ans.value = "";
-            },
-            "genWord": function() {
-                var dic = "abcdefghijklmnopqrstuvxyzABCDEFGHIJKLMNOPQRSTUVXYZ0123456789?!.";
-                var rand = Math.floor(Math.random()*dic.length);
-                return dic.charAt(rand);
-            },
-            "wrongA": function() {
-                this.objects.Alert.innerHTML = "Wrong Answer";
-            },
-            "save": function() {
-                let DATA = {
-                    "highest": (this.data.score > this.data.highest) ? this.data.score : this.data.highest
-                };
-                localStorage.TG = JSON.stringify(DATA);
-            },
-            "timer": {
-                "used": 0,
-                "time": 180,
-                "start": function() {
-                    this.used = 1;
-                    this.interval = setInterval(() => {
-                        if(this.time) {
-                            this.time--;
-                            TG.objects.timer.innerHTML = "Timer: " + this.time;
-                        }
-                        else this.stop();
-                    }, 1000);
-                },
-                "stop": function() {
-                    this.time--;
-                    clearInterval(this.interval);
-                    TG.objects.ans.disabled = true;
-                    Alert("Time's UP!", "Your Score is " + TG.data.score + "!", "success", {"show": true, "text": "OK"}, {"show": false});
-                    TG.save();
-                    TG.data.highest = JSON.parse(localStorage.TG).highest;
-                    this.objects.Highest.innerHTML = "Highest: " + TG.data.highest;
-                }
-            },
-            "data": {
-                "score": 0,
-                "highest": localStorage.TG ? JSON.parse(localStorage.TG).highest : 0,
-                "question": "Question"
-            },
-            "objects" : {}
-        };
         TG.init();
     </script>
 </body>
