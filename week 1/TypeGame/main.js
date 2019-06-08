@@ -9,6 +9,7 @@ var TG = {
         this.objects.ans.onkeyup = () => {TG.KeyUp(event)};
         Alert("Are You Ready?", "Press 'Yes' To Start", "question", {"show": true, "text": "Yes"}, {"show": false}, ()=>{
             this.nextQ();
+            this.objects.ans.focus();
         });
     },
     "KeyUp": function(event) {
